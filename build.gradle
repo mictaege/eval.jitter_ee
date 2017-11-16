@@ -1,0 +1,79 @@
+group 'com.github.mictaege'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'jitter'
+apply plugin: 'war'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies {
+        classpath group: 'com.github.mictaege', name: 'jitter-plugin', version:'1.4'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.2.1'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+    test {
+        java {
+            srcDir 'src/test/java'
+        }
+        resources {
+            srcDir 'src/test/resources'
+        }
+    }
+}
+
+dependencies {
+    compileOnly "javax:javaee-api:7.0"
+    compile "com.github.mictaege:jitter-api:1.4"
+    compile "com.vaadin:vaadin-server:8.1.6"
+    compile "com.vaadin:vaadin-client-compiled:8.1.6"
+    compile "com.vaadin:vaadin-themes:8.1.6"
+    compile "com.vaadin:vaadin-cdi:2.0.0"
+    testCompile "javax:javaee-api:7.0"
+    testCompile "junit:junit:4.12"
+    testCompile "org.mockito:mockito-core:2.2.11"
+    testCompile "org.concordion:concordion:2.1.1"
+}
+
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir file('build/classes/main')
+        testOutputDir file('build/classes/test')
+    }
+}
+
+war {
+    archiveName = 'eval_jitter_ee.war'
+}
+
+jitter {
+
+    flavours = ['ESA', 'NASA', 'ROSKOSMOS']
+
+}

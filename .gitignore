@@ -1,0 +1,14 @@
+\.idea/
+
+\.gradle/
+
+build/
+
+out/
+
+payara/
+
+*.iml
+*/*.iml
+
+gradle.properties
