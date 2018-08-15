@@ -14,7 +14,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath group: 'com.github.mictaege', name: 'jitter-plugin', version:'2018.6'
+        classpath group: 'com.github.mictaege', name: 'jitter-plugin', version:'2018.7'
     }
 }
 
@@ -48,7 +48,7 @@ sourceSets {
 
 dependencies {
     compileOnly "javax:javaee-api:7.0"
-    compile "com.github.mictaege:jitter-api:2018.6"
+    compile "com.github.mictaege:jitter-api:2018.7"
     compile "com.vaadin:vaadin-server:8.1.6"
     compile "com.vaadin:vaadin-client-compiled:8.1.6"
     compile "com.vaadin:vaadin-themes:8.1.6"
