@@ -1,5 +1,5 @@
 group 'com.github.mictaege'
-version '2021.1'
+version '2021.2'
 
 apply plugin: 'java'
 apply plugin: 'jitter'
@@ -14,7 +14,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath group: 'com.github.mictaege', name: 'jitter-plugin', version:'2021.1'
+        classpath group: 'com.github.mictaege', name: 'jitter-plugin', version:'2021.2'
     }
 }
 
@@ -48,16 +48,16 @@ sourceSets {
 }
 
 dependencies {
-    compileOnly "javax:javaee-api:7.0"
-    compile "com.github.mictaege:jitter-api:2021.1"
-    compile "com.vaadin:vaadin-server:8.1.6"
-    compile "com.vaadin:vaadin-client-compiled:8.1.6"
-    compile "com.vaadin:vaadin-themes:8.1.6"
-    compile "com.vaadin:vaadin-cdi:2.0.0"
-    testCompile "javax:javaee-api:7.0"
-    testCompile "junit:junit:4.12"
-    testCompile "org.mockito:mockito-core:2.2.11"
-    testCompile "org.concordion:concordion:2.1.1"
+    implementation "javax:javaee-api:7.0"
+    implementation "com.github.mictaege:jitter-api:2021.2"
+    implementation "com.vaadin:vaadin-server:8.1.6"
+    implementation "com.vaadin:vaadin-client-compiled:8.1.6"
+    implementation "com.vaadin:vaadin-themes:8.1.6"
+    implementation "com.vaadin:vaadin-cdi:2.0.0"
+    testImplementation "javax:javaee-api:7.0"
+    testImplementation "junit:junit:4.12"
+    testImplementation "org.mockito:mockito-core:2.2.11"
+    testImplementation "org.concordion:concordion:2.1.1"
 }
 
 
