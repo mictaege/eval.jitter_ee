@@ -1,5 +1,5 @@
 group 'com.github.mictaege'
-version '2021.2'
+version '2021.3'
 
 apply plugin: 'java'
 apply plugin: 'jitter'
@@ -14,7 +14,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath group: 'com.github.mictaege', name: 'jitter-plugin', version:'2021.2'
+        classpath group: 'com.github.mictaege', name: 'jitter-plugin', version:'2021.3'
     }
 }
 
@@ -49,7 +49,7 @@ sourceSets {
 
 dependencies {
     implementation "javax:javaee-api:7.0"
-    implementation "com.github.mictaege:jitter-api:2021.2"
+    implementation "com.github.mictaege:jitter-api:2021.3"
     implementation "com.vaadin:vaadin-server:8.1.6"
     implementation "com.vaadin:vaadin-client-compiled:8.1.6"
     implementation "com.vaadin:vaadin-themes:8.1.6"
